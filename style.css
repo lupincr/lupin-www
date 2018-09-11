@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css');
 
 body {
   background: #050708;
@@ -64,6 +65,13 @@ nav ul li a:hover {
   width: 100%;
   text-align: center;
   margin-bottom: 100px;
+}
+
+#hero img {
+  animation-name: bounceIn;
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 #hero h2 {
@@ -190,4 +198,29 @@ h3 {
 
 #sponsor-images img {
   margin: 0 10px;
+  transition: all 100ms ease-in-out;
+}
+
+#sponsor-images img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
 }
