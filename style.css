@@ -224,3 +224,14 @@ h3 {
     transform: scale(1) translate3d(0, 0, 0);
   }
 }
+
+#note {
+  width: 100%;
+  background: white;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
