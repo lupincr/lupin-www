@@ -4,7 +4,14 @@ mkdir -p ~/.lupin
 cd ~/.lupin
 rm -rf lupin
 echo "Created ~/.lupin"
-wget -q https://github.com/lupincr/lupin/raw/master/bin/lupin
+echo "Fetching repository.."
+git clone https://github.com/lupincr/lupin-cli -q
+cd lupin-cli
+echo "Repository cloned. Fetching shards.."
+shards >> /dev/null
+crystal build ./src/lupincli.cr -o ../lupin
+cd ..
+rm -rf lupin-cli
 chmod +x ./lupin
 echo "\033[32;1m"
-echo "Lupin was downloaded successfully. Please add ~/.lupin to your PATH."
+echo "Lupin was built successfully. Please add ~/.lupin to your PATH."
