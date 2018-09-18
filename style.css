@@ -168,10 +168,14 @@ nav ul li a:hover {
 }
 
 .code-snippet {
-  padding: 20px;
+  padding: 12px;
   border-radius: 5px;
   background-color: #070c0d;
   border: solid 2px #010203;
+}
+
+.code-snippet:hover {
+  cursor: pointer;
 }
 
 #sponsor-images img {
